@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa | TraderTerminal</title>
+    <link rel="stylesheet" href="trader-terminal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header Bar -->
+    <div class="top-header-bar">
+        <div class="market-indices">
+            <div class="index-item">
+                <span class="index-name">NIFTY</span>
+                <span class="index-value positive" id="nifty">25,879.15</span>
+                <span class="index-change positive">+3.35 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">SENSEX</span>
+                <span class="index-value positive" id="sensex">84,478.67</span>
+                <span class="index-change positive">+12.16 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">BANKNIFTY</span>
+                <span class="index-value positive" id="banknifty">58,381.95</span>
+                <span class="index-change positive">+107.30 (+0.18%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">FINNIFTY</span>
+                <span class="index-value positive" id="finnifty">27,396.15</span>
+                <span class="index-change positive">+58.80 (+0.22%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+        </div>
+        <div class="header-nav">
+            <a href="#" class="nav-link">Book</a>
+            <a href="#" class="nav-link">Positions</a>
+            <a href="#" class="nav-link">Portfolio</a>
+            <a href="#" class="nav-link">Ideas</a>
+        </div>
+        <div class="header-actions">
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-link-page">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="trader-terminal.html" class="nav-link-page active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trader Terminal</span>
+                </a>
+                <a href="watchlist.html" class="nav-link-page">
+                    <i class="far fa-star"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="dashboard.html" class="nav-link-page">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="portfolio.html" class="nav-link-page">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="mutual-funds.html" class="nav-link-page">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="ipo.html" class="nav-link-page">
+                    <i class="fas fa-building"></i>
+                    <span>IPO</span>
+                </a>
+            </nav>
+            <button class="fno-btn">FnO 360</button>
+            <button class="header-btn">Feedback</button>
+            <div class="margin-display">Margin: <span>0.00</span></div>
+            <button class="icon-btn" title="Notifications"><i class="fas fa-bell"></i></button>
+            <div class="user-profile">
+                <div class="user-name">Keshav</div>
+                <div class="user-id">54503122</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-left">
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-th-large nav-icon"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-list nav-icon"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line nav-icon"></i>
+                    <span>Order & Position</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-wallet nav-icon"></i>
+                    <span>Fund Ledger</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-briefcase nav-icon"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-pie nav-icon"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-building nav-icon"></i>
+                    <span>IPO</span>
+                </a>
+                <a href="dsfm.html" class="nav-item">
+                    <i class="fas fa-brain nav-icon"></i>
+                    <span>DSFM</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content-area">
+            <!-- Left Section - Watchlist -->
+            <div class="left-section">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Q Search" id="watchlistSearch">
+                    </div>
+                </div>
+                
+                <div class="watchlist-tabs">
+                    <button class="watchlist-tab active" data-tab="mystocks">My Stocks</button>
+                    <button class="watchlist-tab" data-tab="nifty50">Nifty50</button>
+                    <button class="watchlist-tab" data-tab="watchlist1">MY WATCHLIST</button>
+                    <button class="watchlist-tab" data-tab="watchlist2">WATCHLIST2</button>
+                    <button class="watchlist-tab" data-tab="watchlist3">WATCHLIST3</button>
+                </div>
+
+                <div class="pnl-summary">
+                    <div class="pnl-item">
+                        <span class="pnl-label">Current P&L</span>
+                        <span class="pnl-value">0.00 (0.00%)</span>
+                    </div>
+                    <div class="pnl-item">
+                        <span class="pnl-label">Total P&L</span>
+                        <span class="pnl-value">0.00 (0.00%)</span>
+                    </div>
+                </div>
+
+                <div class="stocks-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Stock Name
+                                    <div class="sort-arrows">
+                                        <i class="fas fa-chevron-up"></i>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </th>
+                                <th>
+                                    Change
+                                    <div class="sort-arrows">
+                                        <i class="fas fa-chevron-up"></i>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </th>
+                                <th>
+                                    Price
+                                    <div class="sort-arrows">
+                                        <i class="fas fa-chevron-up"></i>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="stocksTableBody">
+                            <!-- Stocks will be populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="no-stocks" id="noStocksMessage">
+                    <div class="no-stocks-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="no-stocks-text">No Stocks Found!</div>
+                </div>
+            </div>
+
+            <!-- Middle Section - Chart -->
+            <div class="middle-section">
+                <div class="chart-header">
+                    <div class="chart-symbol-info">
+                        <span class="chart-symbol">NIFTY</span>
+                        <span class="chart-price">25,879.15</span>
+                        <span class="chart-index">NIFTY</span>
+                        <span class="chart-exchange">NSE</span>
+                        <span class="chart-change positive">+3.35(+0.01%)</span>
+                    </div>
+                </div>
+
+                <div class="chart-toolbar">
+                    <div class="toolbar-left">
+                        <button class="toolbar-btn active">1m</button>
+                        <button class="toolbar-btn" title="Chart Type"><i class="fas fa-chart-bar"></i></button>
+                        <button class="toolbar-btn" title="Indicators"><i class="fas fa-chart-line"></i></button>
+                        <button class="toolbar-btn" title="Layout"><i class="fas fa-th"></i></button>
+                        <button class="toolbar-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    </div>
+                    <div class="toolbar-right">
+                        <button class="save-btn">Save</button>
+                    </div>
+                </div>
+
+                <div class="chart-container-wrapper">
+                    <div class="chart-tools-sidebar">
+                        <button class="chart-tool" title="Crosshair"><i class="fas fa-crosshairs"></i></button>
+                        <button class="chart-tool" title="Trend Line"><i class="fas fa-chart-line"></i></button>
+                        <button class="chart-tool" title="Fibonacci"><i class="fas fa-wave-square"></i></button>
+                        <button class="chart-tool" title="Text"><i class="fas fa-font"></i></button>
+                        <button class="chart-tool" title="Ruler"><i class="fas fa-ruler"></i></button>
+                        <button class="chart-tool" title="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                    <div class="chart-main-area">
+                        <div class="chart-info-bar">
+                            <div class="candle-info">
+                                <span>O: <strong>25,877.00</strong></span>
+                                <span>H: <strong>25,884.10</strong></span>
+                                <span>L: <strong>25,874.60</strong></span>
+                                <span>C: <strong>25,884.10</strong></span>
+                                <span class="positive">Change +6.75 (+0.03%)</span>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="candlestickChart"></canvas>
+                        </div>
+                        <div class="chart-timeframe">
+                            <button class="timeframe-btn">1D</button>
+                            <button class="timeframe-btn">5D</button>
+                            <button class="timeframe-btn">1M</button>
+                            <button class="timeframe-btn">2M</button>
+                            <button class="timeframe-btn">3M</button>
+                            <button class="timeframe-btn">1Y</button>
+                            <button class="timeframe-btn">5Y</button>
+                            <button class="timeframe-btn">MAX</button>
+                        </div>
+                        <div class="chart-timestamp">
+                            <span>00:04:32 UTC+5:30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section - Market Data -->
+            <div class="right-section">
+                <div class="market-quantity">
+                    <div class="quantity-item">
+                        <span class="quantity-label">Total Buy Quantity</span>
+                        <span class="quantity-value">0</span>
+                    </div>
+                    <div class="quantity-item">
+                        <span class="quantity-label">Total Sell Quantity</span>
+                        <span class="quantity-value">0</span>
+                    </div>
+                </div>
+
+                <div class="market-data-table">
+                    <table>
+                        <tr>
+                            <td>Open</td>
+                            <td><strong>25,906.10</strong></td>
+                            <td>High</td>
+                            <td><strong>26,010.70</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Low</td>
+                            <td><strong>25,808.40</strong></td>
+                            <td>1M ret</td>
+                            <td><strong>2.57</strong></td>
+                        </tr>
+                        <tr>
+                            <td>3M ret</td>
+                            <td><strong>5.67</strong></td>
+                            <td>1Y ret</td>
+                            <td><strong>8.34</strong></td>
+                        </tr>
+                        <tr>
+                            <td>PClose</td>
+                            <td><strong>25,875.80</strong></td>
+                            <td>Future Price</td>
+                            <td><strong>25951</strong></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="price-range-section">
+                    <div class="range-bar-container">
+                        <div class="range-bar">
+                            <div class="range-label-left">52 Week's Low</div>
+                            <div class="range-label-right">52 Week's High</div>
+                            <div class="range-bar-bg">
+                                <div class="range-bar-fill" style="left: 0%; width: 100%;"></div>
+                                <div class="range-marker" style="left: 85%;"></div>
+                            </div>
+                            <div class="range-values">
+                                <span class="range-value-left">21743.65</span>
+                                <span class="range-value-right">26104.2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="range-bar-container">
+                        <div class="range-bar">
+                            <div class="range-label-left">Today's Low</div>
+                            <div class="range-label-right">Today's High</div>
+                            <div class="range-bar-bg">
+                                <div class="range-bar-fill" style="left: 0%; width: 100%;"></div>
+                                <div class="range-marker" style="left: 45%;"></div>
+                            </div>
+                            <div class="range-values">
+                                <span class="range-value-left">25808.4</span>
+                                <span class="range-value-right">26010.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="trader-terminal.js"></script>
+</body>
+</html>
+

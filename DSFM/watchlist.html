@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa TraderTerminal - Watchlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="watchlist.css">
+</head>
+<body>
+    <div class="ticker-bar">
+        <div class="ticker-item">
+            <span class="ticker-name">NIFTY 25,910.05</span>
+            <span class="ticker-change positive">+30.90 (+0.12%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">SENSEX 84,602.12</span>
+            <span class="ticker-change positive">+142.30 (+0.17%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">BANKNIFTY 58,510.85</span>
+            <span class="ticker-change positive">+126.70 (+0.21%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">FINNIFTY 27,502.33</span>
+            <span class="ticker-change positive">+102.44 (+0.37%)</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="brand-block">
+            <div class="brand-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/5paisa_logo.png" alt="5paisa logo">
+                <div class="brand-text">
+                    <span class="brand-title">5paisa</span>
+                    <span class="brand-subtitle">TraderTerminal</span>
+                </div>
+            </div>
+        </div>
+        <nav class="main-navigation">
+            <a href="index.html" class="nav-link-page">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="trader-terminal.html" class="nav-link-page">
+                <i class="fas fa-chart-line"></i>
+                <span>Trader Terminal</span>
+            </a>
+            <a href="watchlist.html" class="nav-link-page active">
+                <i class="far fa-star"></i>
+                <span>Watchlist</span>
+            </a>
+            <a href="dashboard.html" class="nav-link-page">
+                <i class="fas fa-th-large"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="portfolio.html" class="nav-link-page">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="mutual-funds.html" class="nav-link-page">
+                <i class="fas fa-chart-pie"></i>
+                <span>Mutual Funds</span>
+            </a>
+            <a href="ipo.html" class="nav-link-page">
+                <i class="fas fa-building"></i>
+                <span>IPO</span>
+            </a>
+        </nav>
+        <div class="search-block">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search stocks, mutual funds, IPOs..." />
+        </div>
+        <div class="header-actions">
+            <button class="tv-btn"><i class="fas fa-chart-line"></i> TV</button>
+            <button class="fno-btn">FnO 360</button>
+            <button class="ghost-btn"><i class="far fa-comment"></i> Feedback</button>
+            <button class="ghost-btn"><i class="far fa-bell"></i></button>
+            <div class="margin-chip">
+                <span>Margin</span>
+                <strong>0.00</strong>
+            </div>
+            <div class="profile-chip">
+                <div class="profile-avatar">K</div>
+                <div class="profile-data">
+                    <span class="profile-name">Keshav</span>
+                    <span class="profile-id">54503122</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <aside class="side-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-columns"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="watchlist.html" class="nav-item active">
+                <i class="far fa-star"></i>
+                <span>Watchlist</span>
+            </a>
+            <a href="trader-terminal.html" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Trader Terminal</span>
+            </a>
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Order & Position</span>
+            </a>
+            <a href="portfolio.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="mutual-funds.html" class="nav-item">
+                <i class="fas fa-chart-pie"></i>
+                <span>Mutual Funds</span>
+            </a>
+            <a href="ipo.html" class="nav-item">
+                <i class="fas fa-building"></i>
+                <span>IPO</span>
+            </a>
+            <a href="dsfm.html" class="nav-item">
+                <i class="fas fa-brain"></i>
+                <span>DSFM</span>
+            </a>
+        </aside>
+
+        <main class="watchlist-main">
+            <div class="watchlist-topbar">
+                <div class="section-tabs">
+                    <button class="section-tab active">Book</button>
+                    <button class="section-tab">Positions</button>
+                    <button class="section-tab">Portfolio</button>
+                    <button class="section-tab">Ideas</button>
+                </div>
+                <div class="top-actions">
+                    <button class="icon-btn" title="TradingView"><i class="fas fa-chart-bar"></i></button>
+                    <button class="fno-btn">FnO 360</button>
+                </div>
+            </div>
+
+            <div class="watchlist-columns">
+                <section class="panel watchlist-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h3>My Stocks</h3>
+                            <p>Current <strong>0.00</strong></p>
+                        </div>
+                        <div class="pnl-info">
+                            <div>
+                                <span>Today's P&amp;L</span>
+                                <strong>0.00 (0.00%)</strong>
+                            </div>
+                            <div>
+                                <span>Total P&amp;L</span>
+                                <strong>0.00 (0.00%)</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="watchlist-controls">
+                        <div class="search-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search stock name">
+                        </div>
+                        <div class="tab-row">
+                            <button class="watchlist-tab active" data-tab="mystocks">My Stocks</button>
+                            <button class="watchlist-tab" data-tab="nifty50">Nifty50</button>
+                            <button class="watchlist-tab" data-tab="watchlist1">My Watchlist</button>
+                            <button class="watchlist-tab" data-tab="watchlist2">Watchlist 2</button>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Stock Name</th>
+                                    <th>Change</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="watchlistBody"></tbody>
+                        </table>
+                        <div class="empty-state" id="emptyState">
+                            <div class="empty-illustration">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <p>No Stocks Found!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel chart-panel">
+                    <div class="chart-header">
+                        <div class="symbol-meta">
+                            <div>
+                                <span class="symbol-name">NIFTY</span>
+                                <span class="symbol-exchange">NSE</span>
+                            </div>
+                            <div class="symbol-price">
+                                <strong>25,916.80</strong>
+                                <span class="positive">+6.55 (0.03%)</span>
+                            </div>
+                        </div>
+                        <div class="chart-actions">
+                            <div class="timeframes">
+                                <button class="timeframe active">1m</button>
+                                <button class="timeframe">5m</button>
+                                <button class="timeframe">1h</button>
+                                <button class="timeframe">1D</button>
+                                <button class="timeframe">1W</button>
+                            </div>
+                            <div class="chart-icons">
+                                <button class="icon-btn" title="Indicators"><i class="fas fa-sliders-h"></i></button>
+                                <button class="icon-btn" title="Compare"><i class="fas fa-random"></i></button>
+                                <button class="icon-btn" title="Settings"><i class="fas fa-cog"></i></button>
+                                <button class="icon-btn" title="Fullscreen"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-placeholder">
+                        <div class="chart-graph"></div>
+                        <div class="chart-time">15:38:44 UTC+5:30</div>
+                    </div>
+                    <div class="chart-footer">
+                        <div class="footer-tabs">
+                            <span>1D</span>
+                            <span>5D</span>
+                            <span>1M</span>
+                            <span>2M</span>
+                            <span>3M</span>
+                            <span>1Y</span>
+                            <span>5Y</span>
+                            <span>MAX</span>
+                        </div>
+                        <span class="auto-label">auto</span>
+                    </div>
+                </section>
+
+                <section class="panel info-panel">
+                    <div class="info-card">
+                        <div class="info-row">
+                            <span>Open</span>
+                            <strong>25,915.60</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>High</span>
+                            <strong>25,929.85</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Low</span>
+                            <strong>25,908.45</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Prev. Close</span>
+                            <strong>25,910.05</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Volume</span>
+                            <strong>1.02 Cr</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>M-Capital (Cr)</span>
+                            <strong>12,488</strong>
+                        </div>
+                    </div>
+                    <div class="range-widget">
+                        <div class="range-header">
+                            <span>52 Week's Low</span>
+                            <span>52 Week's High</span>
+                        </div>
+                        <div class="range-track">
+                            <div class="range-fill" style="width: 72%;"></div>
+                            <div class="range-dot" style="left: 70%;"></div>
+                        </div>
+                        <div class="range-footer">
+                            <span>14,850</span>
+                            <span>23,920</span>
+                        </div>
+                    </div>
+                    <div class="range-widget">
+                        <div class="range-header">
+                            <span>Today's Low</span>
+                            <span>Today's High</span>
+                        </div>
+                        <div class="range-track">
+                            <div class="range-fill" style="width: 45%;"></div>
+                            <div class="range-dot" style="left: 44%;"></div>
+                        </div>
+                        <div class="range-footer">
+                            <span>25,901</span>
+                            <span>25,945</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="watchlist.js"></script>
+</body>
+</html>
+

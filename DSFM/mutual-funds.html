@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa | TraderTerminal - Mutual Funds</title>
+    <link rel="stylesheet" href="mutual-funds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header Bar -->
+    <div class="top-header-bar">
+        <div class="market-indices">
+            <div class="index-item">
+                <span class="index-name">NIFTY</span>
+                <span class="index-value positive" id="nifty">25,879.15</span>
+                <span class="index-change positive">+3.35 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">SENSEX</span>
+                <span class="index-value positive" id="sensex">84,478.67</span>
+                <span class="index-change positive">+12.16 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">BANKNIFTY</span>
+                <span class="index-value positive" id="banknifty">58,381.95</span>
+                <span class="index-change positive">+107.30 (+0.18%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">FINNIFTY</span>
+                <span class="index-value positive" id="finnifty">27,396.15</span>
+                <span class="index-change positive">+58.80 (+0.22%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+        </div>
+        <div class="header-actions">
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-link-page">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="trader-terminal.html" class="nav-link-page">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trader Terminal</span>
+                </a>
+                <a href="watchlist.html" class="nav-link-page">
+                    <i class="far fa-star"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="dashboard.html" class="nav-link-page">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="portfolio.html" class="nav-link-page">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="mutual-funds.html" class="nav-link-page active">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="ipo.html" class="nav-link-page">
+                    <i class="fas fa-building"></i>
+                    <span>IPO</span>
+                </a>
+            </nav>
+            <button class="fno-btn">FnO 360</button>
+            <button class="header-btn">
+                <i class="fas fa-comment-dots"></i> Feedback
+            </button>
+            <div class="margin-display">Margin: <span>0.00</span></div>
+            <button class="icon-btn" title="Notifications"><i class="fas fa-bell"></i></button>
+            <div class="user-profile">
+                <div class="user-name">Keshav</div>
+                <div class="user-id">54503122</div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <button class="switch-btn">Switch to Old Web <i class="fas fa-chevron-right"></i></button>
+        <div class="header-icons">
+            <button class="header-icon-btn" title="Cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="header-icon-btn" title="Watchlist"><i class="fas fa-list"></i></button>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="header-left">
+            <h1 class="platform-logo">5paisa | TraderTerminal</h1>
+            <div class="main-nav-tabs">
+                <button class="nav-tab active">Explore</button>
+                <button class="nav-tab">All Funds</button>
+                <button class="nav-tab">Order Book</button>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="search-bar-large">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search funds (min 3 characters)" id="fundSearch">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-left">
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-th-large nav-icon"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-list nav-icon"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="order-position.html" class="nav-item">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <span>Order & Position</span>
+                </a>
+                <a href="fund-ledger.html" class="nav-item">
+                    <i class="fas fa-building nav-icon"></i>
+                    <span>Fund Ledger</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-briefcase nav-icon"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-chart-pie nav-icon"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-building nav-icon"></i>
+                    <span>IPO</span>
+                </a>
+                <a href="dsfm.html" class="nav-item">
+                    <i class="fas fa-brain nav-icon"></i>
+                    <span>DSFM</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Banner Carousel -->
+            <div class="banner-carousel">
+                <div class="banner-item">
+                    <div class="banner-content">
+                        <div class="banner-title">MIRAE ASSET GREAT CONSUMER FUND</div>
+                        <div class="banner-cagr">CAGR (3 Years) 24.17%</div>
+                        <div class="banner-icon"><i class="fas fa-coins"></i></div>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-content">
+                        <div class="banner-title">Groww NIFTY TOTAL MARKET INDEX FUND</div>
+                        <div class="banner-cagr">CAGR (1 Year) 2.91%</div>
+                        <div class="banner-icon"><i class="fas fa-seedling"></i></div>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-content">
+                        <div class="banner-title">AXIS MUTUAL FUND AXIS BALANCED ADVANTAGE FUND</div>
+                        <div class="banner-cagr">CAGR (1 Year) 17.66%</div>
+                        <div class="banner-icon"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <!-- Popular Funds Section -->
+            <div class="popular-funds-section">
+                <div class="section-header">
+                    <div class="section-tabs">
+                        <button class="section-tab active">Popular</button>
+                        <button class="section-tab">All Funds</button>
+                        <button class="section-tab">Order Book</button>
+                    </div>
+                    <a href="#" class="view-all-link">View All <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="funds-list" id="popularFunds">
+                    <!-- Funds will be populated by JS -->
+                </div>
+            </div>
+
+            <!-- Collections Section -->
+            <div class="collections-section">
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <div class="collection-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <span class="collection-label">Your First SIP</span>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-icon"><i class="fas fa-piggy-bank"></i></div>
+                        <span class="collection-label">Wealth Builder</span>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-icon"><i class="fas fa-chart-line"></i></div>
+                        <span class="collection-label">High Growth</span>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-icon"><i class="fas fa-university"></i></div>
+                        <span class="collection-label">Better Than FDs</span>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-icon"><i class="fas fa-coins"></i></div>
+                        <span class="collection-label">Save Taxes</span>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-icon"><i class="fas fa-search"></i></div>
+                        <span class="collection-label">Explore More</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Funds With Best Returns -->
+            <div class="best-returns-section">
+                <div class="section-header">
+                    <div class="section-tabs">
+                        <button class="section-tab active">Daily</button>
+                        <button class="section-tab">Weekly</button>
+                        <button class="section-tab">Monthly</button>
+                        <button class="section-tab">Yearly</button>
+                    </div>
+                    <a href="#" class="view-all-link">View All <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="returns-table-wrapper">
+                    <table class="returns-table">
+                        <thead>
+                            <tr>
+                                <th>NAV (₹)</th>
+                                <th>1Y Return</th>
+                                <th>3Y Return</th>
+                                <th>5Y Return</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="returnsBody">
+                            <!-- Returns data will be populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- NFO and Calculator Row -->
+            <div class="nfo-calculator-row">
+                <!-- NFO Section -->
+                <div class="nfo-section">
+                    <div class="section-header">
+                        <div class="section-tabs">
+                            <button class="section-tab active">Live NFO</button>
+                            <button class="section-tab">Recently Launched NFO</button>
+                        </div>
+                        <a href="#" class="view-all-link">View All <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="nfo-list" id="nfoList">
+                        <!-- NFO items will be populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Calculator Section -->
+                <div class="calculator-section">
+                    <h3 class="calculator-title">Mutual Fund Calculator</h3>
+                    <div class="calculator-tabs">
+                        <label class="radio-tab">
+                            <input type="radio" name="calcType" value="sip" checked>
+                            <span>SIP</span>
+                        </label>
+                        <label class="radio-tab">
+                            <input type="radio" name="calcType" value="lumpsum">
+                            <span>Lumpsum</span>
+                        </label>
+                    </div>
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label>Monthly Investment</label>
+                            <input type="number" value="15000" id="monthlyInvestment">
+                        </div>
+                        <div class="input-group">
+                            <label>Investment Period</label>
+                            <input type="number" value="25" id="investmentPeriod">
+                        </div>
+                        <div class="input-group">
+                            <label>Expected Return</label>
+                            <input type="number" value="12" id="expectedReturn">
+                        </div>
+                    </div>
+                    <div class="calculator-results">
+                        <div class="result-item">
+                            <span>Invested Amount</span>
+                            <strong>₹45,00,000</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>Wealth Gained</span>
+                            <strong>₹81,14,399</strong>
+                        </div>
+                        <div class="result-item total">
+                            <span>Expected Amount</span>
+                            <strong>₹1,26,14,399</strong>
+                        </div>
+                    </div>
+                    <div class="calculator-chart">
+                        <div class="donut-chart">
+                            <div class="chart-center">
+                                <span class="chart-value">₹1.26Cr</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="explore-btn">Explore Funds</button>
+                </div>
+            </div>
+
+            <!-- Learning By Doing Section -->
+            <div class="learning-section">
+                <h3 class="learning-title">Learning By Doing</h3>
+                <div class="learning-cards">
+                    <div class="learning-card">
+                        <div class="learning-icon"><i class="fas fa-book"></i></div>
+                        <span class="learning-label">The Basics</span>
+                    </div>
+                    <div class="learning-card">
+                        <div class="learning-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <span class="learning-label">Advanced</span>
+                    </div>
+                    <div class="learning-card">
+                        <div class="learning-icon"><i class="fas fa-chart-bar"></i></div>
+                        <span class="learning-label">Strategies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="mutual-funds.js"></script>
+</body>
+</html>
+

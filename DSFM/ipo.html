@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa - IPO</title>
+    <link rel="stylesheet" href="ipo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-coin">
+                    <span class="coin-number">5</span>
+                </div>
+                <span class="logo-text">paisa</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-link-page">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="trader-terminal.html" class="nav-link-page">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trader Terminal</span>
+                </a>
+                <a href="watchlist.html" class="nav-link-page">
+                    <i class="far fa-star"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="dashboard.html" class="nav-link-page">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="portfolio.html" class="nav-link-page">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="mutual-funds.html" class="nav-link-page">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="ipo.html" class="nav-link-page active">
+                    <i class="fas fa-building"></i>
+                    <span>IPO</span>
+                </a>
+                <a href="dsfm.html" class="nav-link-page">
+                    <i class="fas fa-brain"></i>
+                    <span>DSFM</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Current IPOs Section -->
+        <section class="ipo-section">
+            <h2 class="section-title">Current IPOs</h2>
+            <div class="ipo-list" id="currentIPOs">
+                <!-- IPO cards will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Upcoming IPOs Section -->
+        <section class="ipo-section">
+            <h2 class="section-title">Upcoming IPOs</h2>
+            <div class="ipo-list" id="upcomingIPOs">
+                <!-- IPO cards will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Past Bids Section -->
+        <section class="ipo-section">
+            <h2 class="section-title">Past Bids</h2>
+            <div class="past-bids-container" id="pastBids">
+                <div class="no-past-bids">No Past Bids found</div>
+            </div>
+        </section>
+
+        <!-- How to Apply for an IPO Section -->
+        <section class="ipo-section how-to-apply-section">
+            <h2 class="section-title">How to Apply for an IPO?</h2>
+            <div class="how-to-apply-content">
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-icon"><i class="fas fa-sign-in-alt"></i></div>
+                        <div class="step-content">
+                            <h3>Step 1</h3>
+                            <p>Login to your 5paisa account and select the issue in the current IPO section.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon"><i class="fas fa-edit"></i></div>
+                        <div class="step-content">
+                            <h3>Step 2</h3>
+                            <p>Enter the number of lots and price at which you wish to apply for.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="step-content">
+                            <h3>Step 3</h3>
+                            <p>Enter your UPI ID and click on submit. With this, your bid will be placed with the exchange.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon"><i class="fas fa-bell"></i></div>
+                        <div class="step-content">
+                            <h3>Step 4</h3>
+                            <p>You will receive a mandate notification to block funds in your UPI app.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon"><i class="fas fa-lock"></i></div>
+                        <div class="step-content">
+                            <h3>Step 5</h3>
+                            <p>Approve the mandate request on your UPI and funds will be blocked.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe 
+                            width="100%" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="How to apply IPO using 5paisa mobile app?" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="watch-on-youtube">Watch on YouTube</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frequently Asked Questions Section -->
+        <section class="ipo-section faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is an IPO?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>An Initial Public Offering (IPO) is the process by which a private company becomes publicly traded by offering its shares to the public for the first time.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I make multiple applications in same IPO using same UPI on 5paisa?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, you can only make one application per UPI ID per IPO. However, you can apply through different UPI IDs if you have multiple accounts.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is cut off price?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cut-off price is the price at which you are willing to accept any price within the price band. It's typically used for retail investors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is book building?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Book building is a process used in IPOs for efficient price discovery. Investors bid for shares within a price band, and the final price is determined based on demand.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are the acceptable UPI Apps?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can use any UPI app like Google Pay, PhonePe, Paytm, BHIM, or any other UPI-enabled app to apply for IPOs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are the different investor types in IPO?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>There are three main investor categories: Retail Individual Investors (RII), Qualified Institutional Buyers (QIB), and Non-Institutional Investors (NII).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-footer">
+                <p>Have any further questions on our charges? <a href="#" class="faq-link">CLICK HERE</a></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="api.js"></script>
+    <script src="ipo.js"></script>
+</body>
+</html>
+

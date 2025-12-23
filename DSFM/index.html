@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa TTWeb - Trading Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="ticker-bar">
+        <div class="ticker-item">
+            <span class="ticker-name">NIFTY 25,920.10</span>
+            <span class="ticker-change positive">+40.95 (+0.16%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">SENSEX 84,632.67</span>
+            <span class="ticker-change positive">+154.00 (+0.18%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">BANKNIFTY 58,518.10</span>
+            <span class="ticker-change positive">+136.15 (+0.23%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">FINNIFTY 27,503.65</span>
+            <span class="ticker-change positive">+107.50 (+0.39%)</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="brand-block">
+            <div class="brand-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/5paisa_logo.png" alt="5paisa logo">
+                <div class="brand-text">
+                    <span class="brand-title">5paisa</span>
+                    <span class="brand-subtitle">TraderTerminal</span>
+                </div>
+            </div>
+        </div>
+        <nav class="main-navigation">
+            <a href="index.html" class="nav-link-page active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="trader-terminal.html" class="nav-link-page">
+                <i class="fas fa-chart-line"></i>
+                <span>Trader Terminal</span>
+            </a>
+            <a href="watchlist.html" class="nav-link-page">
+                <i class="far fa-star"></i>
+                <span>Watchlist</span>
+            </a>
+            <a href="dashboard.html" class="nav-link-page">
+                <i class="fas fa-th-large"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="portfolio.html" class="nav-link-page">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="mutual-funds.html" class="nav-link-page">
+                <i class="fas fa-chart-pie"></i>
+                <span>Mutual Funds</span>
+            </a>
+            <a href="ipo.html" class="nav-link-page">
+                <i class="fas fa-building"></i>
+                <span>IPO</span>
+            </a>
+        </nav>
+        <div class="search-block">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search stocks, mutual funds, IPOs..." />
+        </div>
+        <div class="header-actions">
+            <button class="tv-btn">
+                <i class="fas fa-chart-line"></i>
+                <span>TV</span>
+            </button>
+            <button class="fno-btn">FnO 360</button>
+            <button class="ghost-btn"><i class="far fa-comment"></i> Feedback</button>
+            <button class="ghost-btn"><i class="far fa-bell"></i></button>
+            <div class="margin-chip">
+                <span>Margin</span>
+                <strong>0.00</strong>
+            </div>
+            <div class="profile-chip">
+                <div class="profile-avatar">K</div>
+                <div class="profile-data">
+                    <span class="profile-name">Keshav</span>
+                    <span class="profile-id">54503122</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <aside class="side-nav">
+            <a href="index.html" class="nav-item active">
+                <i class="fas fa-columns"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="watchlist.html" class="nav-item">
+                <i class="far fa-star"></i>
+                <span>Watchlist</span>
+            </a>
+            <a href="order-position.html" class="nav-item">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Order & Position</span>
+            </a>
+            <a href="fund-ledger.html" class="nav-item">
+                <i class="fas fa-book"></i>
+                <span>Fund Ledger</span>
+            </a>
+            <a href="portfolio.html" class="nav-item">
+                <i class="far fa-file-alt"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="dashboard.html" class="nav-item">
+                <i class="far fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="mutual-funds.html" class="nav-item">
+                <i class="fas fa-rupee-sign"></i>
+                <span>Mutual Funds</span>
+            </a>
+            <a href="ipo.html" class="nav-item">
+                <i class="fas fa-building"></i>
+                <span>IPO</span>
+            </a>
+            <a href="dsfm.html" class="nav-item">
+                <i class="fas fa-brain"></i>
+                <span>DSFM</span>
+            </a>
+        </aside>
+
+        <main class="dashboard">
+            <section class="overview-grid">
+                <div class="card investments-card">
+                    <div class="card-header">
+                        <h2>Your Investments</h2>
+                    </div>
+                    <div class="investments-body">
+                        <div class="donut">
+                            <div class="donut-ring">
+                                <span>100%</span>
+                            </div>
+                            <ul class="donut-legend">
+                                <li><span class="dot equity"></span>Equity 0.00%</li>
+                                <li><span class="dot mf"></span>MF 0.00%</li>
+                                <li><span class="dot cash"></span>Cash 0.00%</li>
+                            </ul>
+                        </div>
+                        <div class="investment-details">
+                            <div class="mini-card">
+                                <p>Equity</p>
+                                <h3>0.00</h3>
+                            </div>
+                            <div class="mini-card">
+                                <p>Mutual Funds</p>
+                                <h3>0.00</h3>
+                            </div>
+                            <div class="mini-card disabled">
+                                <p>FNO</p>
+                                <span>Ready to explore derivatives?<br>Activate now</span>
+                            </div>
+                            <div class="mini-card disabled">
+                                <p>Commodity</p>
+                                <span>Ready to explore derivatives?<br>Activate now</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card margin-card">
+                    <div class="card-header">
+                        <h2>Margin</h2>
+                        <button class="link-btn">Add Funds / Increase Margin</button>
+                    </div>
+                    <div class="margin-stats">
+                        <div>
+                            <p>Net Available Margin</p>
+                            <h1>₹0.00</h1>
+                        </div>
+                        <div>
+                            <p>Margin Utilized</p>
+                            <h1>₹0.00</h1>
+                        </div>
+                        <div>
+                            <p>Utilization %</p>
+                            <h1>0.00%</h1>
+                        </div>
+                        <button class="add-margin-btn">+ Add</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="market-movers card">
+                <div class="card-header">
+                    <h2>Market Movers</h2>
+                    <div class="segment-filter">
+                        <button class="market-tab active" data-type="gainers">Gainers</button>
+                        <button class="market-tab" data-type="losers">Losers</button>
+                        <select class="segment-select">
+                            <option>NIFTY 500</option>
+                            <option>NIFTY 50</option>
+                            <option>Sensex</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="moverset-grid">
+                    <div class="mover-card">
+                        <div class="mover-symbol">IPCALAB</div>
+                        <div class="mover-price">₹1,457.00</div>
+                        <div class="mover-change positive">+155.00 (11.90%)</div>
+                        <div class="mover-volume">Vol 26.13L</div>
+                    </div>
+                    <div class="mover-card">
+                        <div class="mover-symbol">ASHOKLEY</div>
+                        <div class="mover-price">₹148.24</div>
+                        <div class="mover-change negative">-2.17 (1.44%)</div>
+                        <div class="mover-volume">Vol 1.69Cr</div>
+                        <span class="badge">52 Week High</span>
+                    </div>
+                    <div class="mover-card">
+                        <div class="mover-symbol">SAGILITY</div>
+                        <div class="mover-price">₹52.95</div>
+                        <div class="mover-change positive">+2.51 (4.98%)</div>
+                        <div class="mover-volume">Vol 108.44Cr</div>
+                        <span class="badge secondary">Movers by Volume</span>
+                    </div>
+                    <div class="mover-card">
+                        <div class="mover-symbol">NIFTY 500</div>
+                        <div class="mover-price">52 Week Low</div>
+                        <div class="mover-change neutral">Track new lows & highs here</div>
+                    </div>
+                </div>
+                <div class="movers-table">
+                    <div class="mover-filters">
+                        <div class="filter-group">
+                            <span>52 Week</span>
+                            <button class="mover-filter active" data-filter="high">High</button>
+                            <button class="mover-filter" data-filter="low">Low</button>
+                        </div>
+                        <div class="filter-group">
+                            <span>View</span>
+                            <button class="mover-filter active" data-view="volume">By Volume</button>
+                            <button class="mover-filter" data-view="value">By Value</button>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>LTP</th>
+                                <th>Change</th>
+                                <th>Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody id="moversBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

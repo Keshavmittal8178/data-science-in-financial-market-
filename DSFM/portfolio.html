@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa Capital - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header Bar -->
+    <div class="top-header-bar">
+        <div class="market-indices">
+            <div class="index-item">
+                <span class="index-name">NIFTY</span>
+                <span class="index-value positive" id="nifty">25,879.15</span>
+                <span class="index-change positive">+3.35 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">SENSEX</span>
+                <span class="index-value positive" id="sensex">84,478.67</span>
+                <span class="index-change positive">+12.16 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">BANKNIFTY</span>
+                <span class="index-value positive" id="banknifty">58,381.95</span>
+                <span class="index-change positive">+107.30 (+0.18%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">FINNIFTY</span>
+                <span class="index-value positive" id="finnifty">27,396.15</span>
+                <span class="index-change positive">+58.80 (+0.22%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+        </div>
+        <div class="header-nav">
+            <a href="#" class="nav-link">Book</a>
+            <a href="#" class="nav-link">Positions</a>
+            <a href="#" class="nav-link active">Portfolio</a>
+            <a href="#" class="nav-link">Ideas</a>
+        </div>
+        <div class="header-actions">
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-link-page">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="trader-terminal.html" class="nav-link-page">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trader Terminal</span>
+                </a>
+                <a href="watchlist.html" class="nav-link-page">
+                    <i class="far fa-star"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="dashboard.html" class="nav-link-page">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="portfolio.html" class="nav-link-page active">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="mutual-funds.html" class="nav-link-page">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="ipo.html" class="nav-link-page">
+                    <i class="fas fa-building"></i>
+                    <span>IPO</span>
+                </a>
+            </nav>
+            <button class="fno-btn">FnO 360</button>
+            <button class="header-btn">
+                <i class="fas fa-comment-dots"></i> Feedback
+            </button>
+            <div class="margin-display">Margin: <span>0.00</span></div>
+            <button class="icon-btn" title="Notifications"><i class="fas fa-bell"></i></button>
+            <div class="user-profile">
+                <div class="user-name">Keshav</div>
+                <div class="user-id">54503122</div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-left">
+            <div class="logo-section">
+                <div class="logo-box">
+                    <span class="logo-text">5pa</span>
+                </div>
+                <div class="nifty-display">
+                    <div class="nifty-dropdown">
+                        <span class="nifty-label">NIFTY</span>
+                        <span class="nifty-value positive">25,879.15 +3.35 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Option Chain</a>
+                        <a href="#" class="dropdown-item">Charts</a>
+                        <a href="#" class="dropdown-item active">Overview</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-th-large nav-icon"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-list nav-icon"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <span>Order & Position</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-building nav-icon"></i>
+                    <span>Fund Ledger</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-chart-pie nav-icon"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-coins nav-icon"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line nav-icon"></i>
+                    <span>IPO</span>
+                </a>
+                <a href="dsfm.html" class="nav-item">
+                    <i class="fas fa-brain nav-icon"></i>
+                    <span>DSFM</span>
+                </a>
+            </nav>
+
+            <div class="no-stocks-sidebar">
+                <div class="no-stocks-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="no-stocks-text">No Stocks Found!</div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Secondary Navigation -->
+            <div class="secondary-nav">
+                <button class="nav-tab active" data-tab="summary">Summary</button>
+                <button class="nav-tab" data-tab="equity">Equity</button>
+                <button class="nav-tab" data-tab="fnd">F&D</button>
+                <button class="nav-tab" data-tab="currency">Currency</button>
+                <button class="nav-tab" data-tab="commodity">Commodity</button>
+                <button class="nav-tab" data-tab="mutual-fund">Mutual Fund</button>
+                <button class="nav-tab" data-tab="smallcase">SmallCase</button>
+            </div>
+
+            <!-- Portfolio Summary View -->
+            <div class="portfolio-summary-view">
+                <!-- Top Left - Portfolio Performance Chart -->
+                <div class="chart-panel">
+                    <div class="panel-header">
+                        <h3>My Portfolio Performance Vs Index</h3>
+                        <select class="index-select" id="indexSelect">
+                            <option value="sensex">BSE Sensex</option>
+                            <option value="nifty">NIFTY</option>
+                            <option value="banknifty">BANKNIFTY</option>
+                            <option value="finnifty">FINNIFTY</option>
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Top Right - No Data Panel -->
+                <div class="no-data-panel">
+                    <div class="no-data-message">No data found</div>
+                </div>
+
+                <!-- Middle Right - My Portfolio Table -->
+                <div class="portfolio-table-panel">
+                    <h3>My Portfolio</h3>
+                    <table class="portfolio-table">
+                        <thead>
+                            <tr>
+                                <th>Asset Class</th>
+                                <th>Curr. Value</th>
+                                <th>Unrealized P/L(%)</th>
+                                <th>Day's P/L (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="portfolioTableBody">
+                            <tr>
+                                <td>Equity</td>
+                                <td>0</td>
+                                <td>0 (0.00%)</td>
+                                <td>0 (0.00%)</td>
+                            </tr>
+                            <tr>
+                                <td>Mutual Fund</td>
+                                <td>0</td>
+                                <td>0 (0.00%)</td>
+                                <td>0 (0.00%)</td>
+                            </tr>
+                            <tr>
+                                <td>FnO</td>
+                                <td>-</td>
+                                <td>0 (0.00%)</td>
+                                <td>0 (0.00%)</td>
+                            </tr>
+                            <tr>
+                                <td>Currency</td>
+                                <td>-</td>
+                                <td>0 (0.00%)</td>
+                                <td>0 (0.00%)</td>
+                            </tr>
+                            <tr>
+                                <td>Commodity</td>
+                                <td>-</td>
+                                <td>0 (0.00%)</td>
+                                <td>0 (0.00%)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Bottom - Top Gainers and Losers -->
+                <div class="gainers-losers-panel">
+                    <div class="gainers-section">
+                        <h3>Gainers</h3>
+                        <table class="gainers-losers-table">
+                            <thead>
+                                <tr>
+                                    <th>Asset Class</th>
+                                    <th>CMP</th>
+                                    <th>Day's Change</th>
+                                    <th>Change (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="gainersBody">
+                                <tr>
+                                    <td colspan="4" class="no-record">No record found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="losers-section">
+                        <h3>Losers</h3>
+                        <table class="gainers-losers-table">
+                            <thead>
+                                <tr>
+                                    <th>Asset Class</th>
+                                    <th>CMP</th>
+                                    <th>Day's Change</th>
+                                    <th>Change (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="losersBody">
+                                <tr>
+                                    <td colspan="4" class="no-record">No record found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>
+

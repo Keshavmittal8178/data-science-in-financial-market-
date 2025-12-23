@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+    background: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-coin {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border: 2px solid #d0d0d0;
+}
+
+.coin-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-navigation {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav-link-page {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #666666;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.nav-link-page:hover {
+    background: #f5f7fa;
+    color: #0066cc;
+}
+
+.nav-link-page.active {
+    background: #0066cc;
+    color: white;
+}
+
+.nav-link-page i {
+    font-size: 14px;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* IPO Section */
+.ipo-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.ipo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* IPO Card */
+.ipo-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.ipo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.ipo-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ipo-status.pre-open {
+    background: #00cc66;
+    color: white;
+}
+
+.ipo-status.open {
+    background: #0066cc;
+    color: white;
+}
+
+.ipo-status.closed {
+    background: #999999;
+    color: white;
+}
+
+.ipo-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.ipo-company-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.ipo-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.ipo-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ipo-detail-label {
+    font-size: 12px;
+    color: #666666;
+    font-weight: 500;
+}
+
+.ipo-detail-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.ipo-price-range {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ipo-price-separator {
+    color: #999999;
+}
+
+.ipo-min-investment {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.min-investment-icon {
+    font-size: 18px;
+    color: #0066cc;
+}
+
+.min-investment-text {
+    font-size: 13px;
+    color: #666666;
+}
+
+.min-investment-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-left: auto;
+}
+
+.ipo-action {
+    display: flex;
+    align-items: center;
+}
+
+.apply-ipo-btn {
+    padding: 12px 30px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.apply-ipo-btn:hover {
+    background: #e62e2e;
+    transform: scale(1.05);
+}
+
+.apply-ipo-btn:active {
+    transform: scale(0.98);
+}
+
+/* Empty State */
+.empty-ipo {
+    background: white;
+    border-radius: 8px;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.empty-ipo-icon {
+    font-size: 48px;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.empty-ipo-text {
+    font-size: 16px;
+    color: #666666;
+    font-weight: 500;
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn:hover {
+    background: #e62e2e;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .ipo-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .ipo-content {
+        padding-right: 0;
+    }
+    
+    .ipo-action {
+        width: 100%;
+    }
+    
+    .apply-ipo-btn {
+        width: 100%;
+    }
+    
+    .ipo-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        padding: 12px 20px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .main-container {
+        padding: 20px 15px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .ipo-company-name {
+        font-size: 18px;
+    }
+    
+    .scroll-top-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f7fa;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999999;
+}
+
+/* Past Bids Section */
+.past-bids-container {
+    background: white;
+    border-radius: 8px;
+    padding: 40px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.no-past-bids {
+    color: #999;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* How to Apply Section */
+.how-to-apply-section {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.how-to-apply-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.step-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background: #0066cc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.step-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.watch-on-youtube {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #0066cc;
+}
+
+.faq-question span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    flex: 1;
+}
+
+.faq-question i {
+    font-size: 14px;
+    color: #666;
+    transition: transform 0.3s;
+}
+
+.faq-item.open .faq-question i {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px 0;
+    padding-left: 20px;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.faq-footer p {
+    font-size: 14px;
+    color: #666;
+}
+
+.faq-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.faq-link:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+/* Responsive for new sections */
+@media (max-width: 968px) {
+    .how-to-apply-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-container {
+        grid-template-columns: 1fr;
+    }
+}
+

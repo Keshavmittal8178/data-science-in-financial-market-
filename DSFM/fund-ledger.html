@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa TraderTerminal - Fund Ledger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="fund-ledger.css">
+</head>
+<body>
+    <div class="ticker-bar">
+        <div class="ticker-item">
+            <span class="ticker-name">NIFTY 25,910.05</span>
+            <span class="ticker-change positive">+30.90 (+0.12%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">SENSEX 84,602.12</span>
+            <span class="ticker-change positive">+142.30 (+0.17%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">BANKNIFTY 58,510.85</span>
+            <span class="ticker-change positive">+126.70 (+0.21%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">FINNIFTY 27,502.33</span>
+            <span class="ticker-change positive">+102.44 (+0.37%)</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="brand-block">
+            <div class="brand-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/5paisa_logo.png" alt="5paisa logo">
+                <div class="brand-text">
+                    <span class="brand-title">5paisa</span>
+                    <span class="brand-subtitle">TraderTerminal</span>
+                </div>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <a href="#" class="nav-link">Book</a>
+            <a href="#" class="nav-link">Positions</a>
+            <a href="#" class="nav-link">Portfolio</a>
+            <a href="#" class="nav-link">Ideas</a>
+        </nav>
+        <div class="header-actions">
+            <button class="fno-btn">FnO 360</button>
+            <button class="ghost-btn"><i class="far fa-comment"></i> Feedback</button>
+            <div class="margin-chip">
+                <span>Margin</span>
+                <strong>0.00</strong>
+            </div>
+            <button class="ghost-btn"><i class="far fa-bell"></i></button>
+            <div class="profile-chip">
+                <div class="profile-avatar">K</div>
+                <div class="profile-data">
+                    <span class="profile-name">Keshav</span>
+                    <span class="profile-id">54503122</span>
+                </div>
+            </div>
+            <button class="icon-btn" title="History"><i class="fas fa-clock"></i></button>
+            <button class="icon-btn" title="Refresh"><i class="fas fa-sync-alt"></i></button>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <aside class="side-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-columns"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="watchlist.html" class="nav-item">
+                <i class="far fa-star"></i>
+                <span>Watchlist</span>
+            </a>
+            <a href="order-position.html" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                <span>Order & Position</span>
+            </a>
+            <a href="fund-ledger.html" class="nav-item active">
+                <i class="fas fa-book"></i>
+                <span>Fund Ledger</span>
+            </a>
+            <a href="portfolio.html" class="nav-item">
+                <i class="far fa-file-alt"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="dashboard.html" class="nav-item">
+                <i class="far fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="mutual-funds.html" class="nav-item">
+                <i class="fas fa-rupee-sign"></i>
+                <span>Mutual Funds</span>
+            </a>
+            <a href="ipo.html" class="nav-item">
+                <i class="fas fa-building"></i>
+                <span>IPO</span>
+            </a>
+            <a href="dsfm.html" class="nav-item">
+                <i class="fas fa-brain"></i>
+                <span>DSFM</span>
+            </a>
+        </aside>
+
+        <main class="fund-main">
+            <div class="fund-columns">
+                <section class="panel watchlist-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h3>My Stocks</h3>
+                            <p>Current <strong>0.00</strong></p>
+                        </div>
+                        <div class="pnl-info">
+                            <div>
+                                <span>Today's P&L</span>
+                                <strong>0.00 (0.00%)</strong>
+                            </div>
+                            <div>
+                                <span>Total P&L</span>
+                                <strong>0.00 (0.00%)</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="watchlist-controls">
+                        <div class="search-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+                        <div class="tab-row">
+                            <button class="watchlist-tab active" data-tab="mystocks">My Stocks</button>
+                            <button class="watchlist-tab" data-tab="nifty50">Nifty50</button>
+                            <button class="watchlist-tab" data-tab="watchlist1">MY WATCHLIST</button>
+                            <button class="watchlist-tab" data-tab="watchlist2">WATCHLIST2</button>
+                            <button class="watchlist-tab"><i class="fas fa-cog"></i></button>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Stock Name</th>
+                                    <th>Change</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="watchlistBody"></tbody>
+                        </table>
+                        <div class="empty-state" id="emptyState">
+                            <div class="empty-illustration">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <p>No Stocks Found!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel fund-panel">
+                    <div class="fund-tabs">
+                        <button class="fund-tab active" data-tab="funds">Funds</button>
+                        <button class="fund-tab" data-tab="ledger">Ledger</button>
+                    </div>
+                    <div class="fund-content">
+                        <div class="net-margin">
+                            <span>Net Available Margin</span>
+                            <strong>₹ 0.00</strong>
+                        </div>
+                        <div class="fund-metrics">
+                            <div class="metric-item">
+                                <span>Available Cash <i class="fas fa-chevron-down"></i></span>
+                                <strong>0.00</strong>
+                            </div>
+                            <div class="metric-item">
+                                <span>Collateral <i class="fas fa-chevron-down"></i></span>
+                                <strong>0.00</strong>
+                            </div>
+                            <div class="metric-item">
+                                <span>Margin Utilized <i class="fas fa-chevron-down"></i></span>
+                                <strong>0.00</strong>
+                            </div>
+                            <div class="metric-item">
+                                <span>Peak Margin Utilized <i class="fas fa-chevron-down"></i></span>
+                                <strong>0.00</strong>
+                            </div>
+                            <div class="metric-item">
+                                <span>Gross Holding Value (Cover) Percent (GHV %) <i class="fas fa-chevron-down"></i></span>
+                                <strong>0.00%</strong>
+                            </div>
+                        </div>
+                        <div class="paylater-section">
+                            <div class="paylater-header">
+                                <h4>Pay Later Summary (MTF)</h4>
+                            </div>
+                            <div class="paylater-content">
+                                <div class="paylater-illustration">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <p>You have total <strong>0 Holdings</strong> in Pay Later →</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="fund-ledger.js"></script>
+</body>
+</html>
+

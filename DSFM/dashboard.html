@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa Capital - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header Bar with Market Indices -->
+    <div class="top-header-bar">
+        <div class="market-indices">
+            <div class="index-item">
+                <span class="index-name">NIFTY</span>
+                <span class="index-value positive" id="nifty">25,879.15</span>
+                <span class="index-change positive">+3.35 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">SENSEX</span>
+                <span class="index-value positive" id="sensex">84,478.67</span>
+                <span class="index-change positive">+12.16 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">BANKNIFTY</span>
+                <span class="index-value positive" id="banknifty">58,381.95</span>
+                <span class="index-change positive">+107.30 (+0.18%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="index-item">
+                <span class="index-name">FINNIFTY</span>
+                <span class="index-value positive" id="finnifty">27,396.15</span>
+                <span class="index-change positive">+58.80 (+0.22%) <i class="fas fa-arrow-up"></i></span>
+            </div>
+        </div>
+        <div class="header-actions">
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-link-page">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="trader-terminal.html" class="nav-link-page">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trader Terminal</span>
+                </a>
+                <a href="watchlist.html" class="nav-link-page">
+                    <i class="far fa-star"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="dashboard.html" class="nav-link-page active">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="portfolio.html" class="nav-link-page">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="mutual-funds.html" class="nav-link-page">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="ipo.html" class="nav-link-page">
+                    <i class="fas fa-building"></i>
+                    <span>IPO</span>
+                </a>
+            </nav>
+            <button class="icon-btn" title="Edit"><i class="fas fa-pencil-alt"></i></button>
+            <button class="header-btn">Feedback</button>
+            <div class="margin-display">Margin: <span>0.00</span></div>
+            <button class="icon-btn" title="Notifications"><i class="fas fa-bell"></i></button>
+            <div class="user-dropdown">
+                <div class="user-name">Keshav</div>
+                <div class="user-id">54503122</div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-left">
+            <div class="logo-section">
+                <div class="logo-box">
+                    <span class="logo-text">5pa</span>
+                </div>
+                <div class="nifty-display">
+                    <span class="nifty-label">NIFTY</span>
+                    <span class="nifty-value positive">25,879.15 +3.35 (+0.01%) <i class="fas fa-arrow-up"></i></span>
+                </div>
+            </div>
+            
+            <div class="dropdown-menu">
+                <select class="dropdown-select">
+                    <option value="overview" selected>Overview</option>
+                    <option value="option-chain">Option Chain</option>
+                    <option value="charts">Charts</option>
+                </select>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <div class="nav-icon red-square"></div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-list nav-icon"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line nav-icon"></i>
+                    <span>Order & Position</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-wallet nav-icon"></i>
+                    <span>Fund Ledger</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-briefcase nav-icon"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-pie nav-icon"></i>
+                    <span>Mutual Funds</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-building nav-icon"></i>
+                    <span>IPO</span>
+                </a>
+                <a href="dsfm.html" class="nav-item">
+                    <i class="fas fa-brain nav-icon"></i>
+                    <span>DSFM</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Search Bar and Quick Actions -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search" id="searchInput">
+                </div>
+                <div class="quick-actions">
+                    <button class="icon-btn-large" title="TradingView"><i class="fas fa-chart-bar"></i></button>
+                    <button class="fno-btn">FnO 360</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Summary -->
+            <div class="portfolio-summary">
+                <div class="summary-item">
+                    <div class="summary-dot equity"></div>
+                    <div class="summary-text">
+                        <span class="summary-label">Equity</span>
+                        <span class="summary-value">0.00%</span>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-dot mf"></div>
+                    <div class="summary-text">
+                        <span class="summary-label">MF</span>
+                        <span class="summary-value">0.00%</span>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-dot cash"></div>
+                    <div class="summary-text">
+                        <span class="summary-label">Cash available</span>
+                        <span class="summary-value">0.00%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equity and Mutual Funds Section -->
+            <div class="investment-section">
+                <div class="investment-panel">
+                    <div class="panel-header">
+                        <h3>Equity</h3>
+                        <a href="#" class="details-link">Details</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="investment-row">
+                            <div class="investment-item">
+                                <span class="investment-label">Invested</span>
+                                <span class="investment-value">0.00</span>
+                            </div>
+                            <div class="investment-item">
+                                <span class="investment-label">Current</span>
+                                <span class="investment-value">0.00</span>
+                            </div>
+                        </div>
+                        <div class="pnl-row">
+                            <div class="pnl-item">
+                                <span class="pnl-label">Today's P&L</span>
+                                <span class="pnl-value">0.00 (0.00%)</span>
+                            </div>
+                            <div class="pnl-item">
+                                <span class="pnl-label">Total P&L</span>
+                                <span class="pnl-value">0.00 (0.00%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="investment-panel">
+                    <div class="panel-header">
+                        <h3>Mutual Funds</h3>
+                        <a href="#" class="details-link">Details</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="investment-row">
+                            <div class="investment-item">
+                                <span class="investment-label">Invested</span>
+                                <span class="investment-value">0.00</span>
+                            </div>
+                            <div class="investment-item">
+                                <span class="investment-label">Current</span>
+                                <span class="investment-value">0.00</span>
+                            </div>
+                        </div>
+                        <div class="pnl-row">
+                            <div class="pnl-item">
+                                <span class="pnl-label">Total P&L</span>
+                                <span class="pnl-value">0.00 (0.00%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FNO and Commodity Section -->
+            <div class="trading-section">
+                <div class="trading-panel">
+                    <div class="panel-header">
+                        <h3>FNO</h3>
+                        <a href="#" class="details-link">Details</a>
+                    </div>
+                    <div class="panel-content">
+                        <p class="panel-description">Ready to explore derivatives? Open doors to diverse trading possibilities with futures and options</p>
+                        <button class="activate-btn">Activate now</button>
+                    </div>
+                </div>
+
+                <div class="trading-panel">
+                    <div class="panel-header">
+                        <h3>Commodity</h3>
+                        <a href="#" class="details-link">Details</a>
+                    </div>
+                    <div class="panel-content">
+                        <p class="panel-description">Ready to explore derivatives? Open doors to diverse trading possibilities with futures and options</p>
+                        <button class="activate-btn">Activate now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Margin Details Section -->
+            <div class="margin-section">
+                <div class="margin-panel">
+                    <div class="panel-header">
+                        <h3>Margin</h3>
+                    </div>
+                    <div class="margin-content">
+                        <div class="margin-details">
+                            <div class="margin-item">
+                                <span class="margin-label">Net Available Margin</span>
+                                <span class="margin-value">₹ 0.00</span>
+                            </div>
+                            <div class="margin-item">
+                                <span class="margin-label">Margin Utilized</span>
+                                <span class="margin-value">₹ 0.00</span>
+                            </div>
+                            <div class="margin-item">
+                                <span class="margin-label">Utilization %</span>
+                                <span class="margin-value">0.00 %</span>
+                            </div>
+                        </div>
+                        <div class="add-funds-section">
+                            <h4>Add Funds / Increase Margin</h4>
+                            <div class="add-funds-input">
+                                <input type="text" value="₹ 00" readonly>
+                                <button class="add-btn">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Movers Section -->
+            <div class="market-movers-section">
+                <div class="movers-header">
+                    <h3>Market Movers</h3>
+                    <div class="movers-tabs">
+                        <button class="mover-tab active" data-tab="gainers">Gainers</button>
+                        <button class="mover-tab" data-tab="losers">Losers</button>
+                    </div>
+                </div>
+                <div class="movers-content">
+                    <div class="mover-panel">
+                        <div class="mover-panel-header">
+                            <select class="index-select">
+                                <option>NIFTY 500</option>
+                            </select>
+                            <div class="nav-arrows">
+                                <button class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+                                <button class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="mover-stock" id="gainersStock">
+                            <div class="stock-name">DATAPATTNS</div>
+                            <div class="stock-volume">Vol 62.91L</div>
+                            <div class="stock-price positive">3,003.40 <i class="fas fa-arrow-up"></i></div>
+                            <div class="stock-change positive">+211.20 (7.56%)</div>
+                        </div>
+                    </div>
+
+                    <div class="mover-panel">
+                        <div class="mover-panel-header">
+                            <select class="index-select">
+                                <option>NIFTY 500</option>
+                            </select>
+                            <div class="nav-arrows">
+                                <button class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+                                <button class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="mover-stock">
+                            <div class="stock-name">52 Week High</div>
+                            <div class="stock-name-small">ASHOKLEY</div>
+                            <div class="stock-volume">Vol 5.36Cr</div>
+                            <div class="stock-price positive">150.41 <i class="fas fa-arrow-up"></i></div>
+                            <div class="stock-change positive">+7.88 (5.53%)</div>
+                        </div>
+                    </div>
+
+                    <div class="mover-panel">
+                        <div class="mover-panel-header">
+                            <select class="index-select">
+                                <option>NIFTY 500</option>
+                            </select>
+                            <div class="nav-arrows">
+                                <button class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+                                <button class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="mover-stock">
+                            <div class="stock-name">Movers By Volume</div>
+                            <div class="stock-name-small">IDEA</div>
+                            <div class="stock-volume">Vol 139.11Cr</div>
+                            <div class="stock-price positive">10.47 <i class="fas fa-arrow-up"></i></div>
+                            <div class="stock-change positive">+0.10 (0.96%)</div>
+                        </div>
+                    </div>
+
+                    <div class="mover-panel">
+                        <div class="mover-panel-header">
+                            <select class="index-select">
+                                <option>NIFTY 500</option>
+                            </select>
+                            <div class="nav-arrows">
+                                <button class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+                                <button class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="mover-stock">
+                            <div class="stock-name">52 Week Low</div>
+                            <div class="stock-name-small">-</div>
+                            <div class="stock-volume">-</div>
+                            <div class="stock-price">-</div>
+                            <div class="stock-change">-</div>
+                        </div>
+                    </div>
+
+                    <div class="mover-panel">
+                        <div class="mover-panel-header">
+                            <select class="index-select">
+                                <option>NIFTY 500</option>
+                            </select>
+                            <div class="nav-arrows">
+                                <button class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+                                <button class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="mover-stock">
+                            <div class="stock-name">Movers By Value</div>
+                            <div class="stock-name-small">-</div>
+                            <div class="stock-volume">-</div>
+                            <div class="stock-price">-</div>
+                            <div class="stock-change">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

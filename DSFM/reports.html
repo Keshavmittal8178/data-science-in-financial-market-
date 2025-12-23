@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5paisa - Reports</title>
+    <link rel="stylesheet" href="reports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-coin">
+                    <span class="coin-number">5</span>
+                </div>
+                <span class="logo-text">paisa</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <nav class="main-navigation">
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link-page">PORTFOLIO <i class="fas fa-chevron-down"></i></a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link-page">TRADE REPORTS <i class="fas fa-chevron-down"></i></a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link-page">OTHER REPORTS <i class="fas fa-chevron-down"></i></a>
+                </div>
+            </nav>
+            <div class="user-section">
+                <button class="file-taxes-btn">
+                    <span>File Taxes</span>
+                    <img src="https://via.placeholder.com/20x20" alt="cleartax" class="cleartax-logo">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="user-profile">
+                    <div class="user-name">KESHAV</div>
+                    <div class="user-id">54503122</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Secondary Navigation -->
+    <div class="secondary-nav">
+        <button class="nav-tab active" data-tab="summary">Summary</button>
+        <button class="nav-tab" data-tab="equity">Equity</button>
+        <button class="nav-tab" data-tab="fnd">F&D</button>
+        <button class="nav-tab" data-tab="currency">Currency</button>
+        <button class="nav-tab" data-tab="commodity">Commodity</button>
+        <button class="nav-tab" data-tab="mutual-fund">Mutual Fund</button>
+        <button class="nav-tab" data-tab="smallcase">SmallCase</button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Top Left - Portfolio Performance Chart -->
+        <div class="chart-panel">
+            <div class="panel-header">
+                <h3>My Portfolio Performance Vs Index</h3>
+                <select class="index-select" id="indexSelect">
+                    <option value="sensex">BSE Sensex</option>
+                    <option value="nifty">NIFTY</option>
+                    <option value="banknifty">BANKNIFTY</option>
+                    <option value="finnifty">FINNIFTY</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Top Right - No Data Panel -->
+        <div class="no-data-panel">
+            <div class="no-data-message">No data found</div>
+        </div>
+
+        <!-- Middle Right - My Portfolio Table -->
+        <div class="portfolio-table-panel">
+            <h3>My Portfolio</h3>
+            <table class="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>Asset Class</th>
+                        <th>Curr. Value</th>
+                        <th>Unrealized P/L(%)</th>
+                        <th>Day's P/L (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="portfolioTableBody">
+                    <tr>
+                        <td>Equity</td>
+                        <td>0</td>
+                        <td>0 (0.00%)</td>
+                        <td>0 (0.00%)</td>
+                    </tr>
+                    <tr>
+                        <td>Mutual Fund</td>
+                        <td>0</td>
+                        <td>0 (0.00%)</td>
+                        <td>0 (0.00%)</td>
+                    </tr>
+                    <tr>
+                        <td>FnO</td>
+                        <td>-</td>
+                        <td>0 (0.00%)</td>
+                        <td>0 (0.00%)</td>
+                    </tr>
+                    <tr>
+                        <td>Currency</td>
+                        <td>-</td>
+                        <td>0 (0.00%)</td>
+                        <td>0 (0.00%)</td>
+                    </tr>
+                    <tr>
+                        <td>Commodity</td>
+                        <td>-</td>
+                        <td>0 (0.00%)</td>
+                        <td>0 (0.00%)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Bottom - Top Gainers and Losers -->
+        <div class="gainers-losers-panel">
+            <div class="gainers-section">
+                <h3>Gainers</h3>
+                <table class="gainers-losers-table">
+                    <thead>
+                        <tr>
+                            <th>Asset Class</th>
+                            <th>CMP</th>
+                            <th>Day's Change</th>
+                            <th>Change (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gainersBody">
+                        <tr>
+                            <td colspan="4" class="no-record">No record found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="losers-section">
+                <h3>Losers</h3>
+                <table class="gainers-losers-table">
+                    <thead>
+                        <tr>
+                            <th>Asset Class</th>
+                            <th>CMP</th>
+                            <th>Day's Change</th>
+                            <th>Change (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="losersBody">
+                        <tr>
+                            <td colspan="4" class="no-record">No record found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="reports.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSFM Analysis - 5paisa Capital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dsfm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="ticker-bar">
+        <div class="ticker-item">
+            <span class="ticker-name">NIFTY 25,920.10</span>
+            <span class="ticker-change positive">+40.95 (+0.16%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">SENSEX 84,632.67</span>
+            <span class="ticker-change positive">+154.00 (+0.18%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">BANKNIFTY 58,518.10</span>
+            <span class="ticker-change positive">+136.15 (+0.23%)</span>
+        </div>
+        <div class="ticker-item">
+            <span class="ticker-name">FINNIFTY 27,503.65</span>
+            <span class="ticker-change positive">+107.50 (+0.39%)</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="brand-block">
+            <div class="brand-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/5paisa_logo.png" alt="5paisa logo">
+                <div class="brand-text">
+                    <span class="brand-title">5paisa</span>
+                    <span class="brand-subtitle">DSFM Analysis</span>
+                </div>
+            </div>
+        </div>
+        <nav class="main-navigation">
+            <a href="index.html" class="nav-link-page">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="trader-terminal.html" class="nav-link-page">
+                <i class="fas fa-chart-line"></i>
+                <span>Trader Terminal</span>
+            </a>
+            <a href="watchlist.html" class="nav-link-page">
+                <i class="far fa-star"></i>
+                <span>Watchlist</span>
+            </a>
+            <a href="dashboard.html" class="nav-link-page">
+                <i class="fas fa-th-large"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="portfolio.html" class="nav-link-page">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="dsfm.html" class="nav-link-page active">
+                <i class="fas fa-brain"></i>
+                <span>DSFM</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="main-layout">
+        <aside class="side-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-columns"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="watchlist.html" class="nav-item">
+                <i class="far fa-star"></i>
+                <span>Watchlist</span>
+            </a>
+            <a href="order-position.html" class="nav-item">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Order & Position</span>
+            </a>
+            <a href="fund-ledger.html" class="nav-item">
+                <i class="fas fa-book"></i>
+                <span>Fund Ledger</span>
+            </a>
+            <a href="portfolio.html" class="nav-item">
+                <i class="far fa-file-alt"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="dashboard.html" class="nav-item">
+                <i class="far fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="mutual-funds.html" class="nav-item">
+                <i class="fas fa-rupee-sign"></i>
+                <span>Mutual Funds</span>
+            </a>
+            <a href="ipo.html" class="nav-item">
+                <i class="fas fa-building"></i>
+                <span>IPO</span>
+            </a>
+            <a href="dsfm.html" class="nav-item active">
+                <i class="fas fa-brain"></i>
+                <span>DSFM</span>
+            </a>
+        </aside>
+
+        <main class="dsfm-main">
+            <div class="dsfm-header">
+                <h1>DSFM Analysis</h1>
+                <p>Advanced Financial Analysis using GARCH, FinBERT, and LSTM Models</p>
+            </div>
+
+            <!-- Symbol Selection -->
+            <div class="dsfm-controls">
+                <div class="control-group">
+                    <label for="symbolSelect">Select Symbol:</label>
+                    <select id="symbolSelect" class="symbol-select">
+                        <option value="">-- Loading Symbols... --</option>
+                    </select>
+                </div>
+                <div class="control-buttons">
+                    <button id="analyzeBtn" class="btn-primary">
+                        <i class="fas fa-chart-line"></i> Run Combined Analysis
+                    </button>
+                    <button id="garchBtn" class="btn-secondary">
+                        <i class="fas fa-wave-square"></i> GARCH Only
+                    </button>
+                    <button id="lstmBtn" class="btn-secondary">
+                        <i class="fas fa-network-wired"></i> LSTM Only
+                    </button>
+                    <button id="finbertBtn" class="btn-secondary">
+                        <i class="fas fa-comments"></i> FinBERT Only
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>Analyzing data...</span>
+            </div>
+
+            <!-- Results Container -->
+            <div id="resultsContainer" class="results-container" style="display: none;">
+                <!-- GARCH Results -->
+                <div class="analysis-section" id="garchSection">
+                    <h2><i class="fas fa-wave-square"></i> GARCH Volatility Analysis</h2>
+                    <div class="analysis-content" id="garchContent"></div>
+                </div>
+
+                <!-- LSTM Results -->
+                <div class="analysis-section" id="lstmSection">
+                    <h2><i class="fas fa-network-wired"></i> LSTM Price Forecasting</h2>
+                    <div class="analysis-content" id="lstmContent">
+                        <canvas id="lstmChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- FinBERT Results -->
+                <div class="analysis-section" id="finbertSection">
+                    <h2><i class="fas fa-comments"></i> FinBERT Sentiment Analysis</h2>
+                    <div class="analysis-content" id="finbertContent"></div>
+                </div>
+
+                <!-- Combined Summary -->
+                <div class="analysis-section summary-section" id="summarySection">
+                    <h2><i class="fas fa-clipboard-list"></i> Analysis Summary</h2>
+                    <div class="analysis-content" id="summaryContent"></div>
+                </div>
+            </div>
+
+            <!-- FinBERT All Symbols -->
+            <div class="analysis-section" id="allFinbertSection">
+                <h2><i class="fas fa-comments"></i> FinBERT Analysis - All Symbols</h2>
+                <button id="loadAllFinbert" class="btn-secondary">
+                    <i class="fas fa-download"></i> Load All Sentiment Data
+                </button>
+                <div class="analysis-content" id="allFinbertContent"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="dsfm.js"></script>
+</body>
+</html>
+
